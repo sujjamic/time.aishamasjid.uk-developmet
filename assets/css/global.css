@@ -1,0 +1,265 @@
+:root {
+    --amber: #fcb900;
+    --orange: #ff6900;
+    --black: #000000;
+    --cyan-bluish-grey: #abb8c3;
+    --white: #ffffff;
+    --pale-pink: #f78da7;
+    --vivid-red: #cf2e2e;
+    --light-green-cyan: #7bdcb5;
+    --vivid-green-cyan: #00d084;
+    --pale-cyan-blue: #8ed1fc;
+    --vivid-cyan-blue: #0693e3;
+    --vivid-purple: #9b51e0;
+    --grey: #ccc;
+    --white50: rgba(255,255,255,0.5);
+    --white10: rgba(255,255,255,0.1);
+    --white5: rgba(255,255,255,0.05);
+  }
+
+html, body, iframe {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/helvetica_neue_lt_std.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/helvetica_neue_lt_std.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/helvetica_neue_lt_std.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+  
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: "Helvetica Neue", Roboto, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1.5vw;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 2vw;
+    margin: 2vh 0 0 0;
+    font-weight: 100;
+}
+
+section {
+    position: absolute;
+}
+
+section#main {
+    width: calc(100vw / 12 * 8);
+    height: calc(100vh / 12 * 8);
+    top: 0;
+    left: 0;
+    background-color: var(--black);
+}
+
+section#main img {
+    position: relative;
+    top: 40%;
+    left: 40%;
+    background: var(--white50);
+    padding: 1vw;
+    border-radius: 1vw;
+    height: auto;
+    width: 14vw;
+}
+
+section#prayerbar {
+    width: 100%;
+    height: calc(100vh / 12 * 3);
+    top: calc(100vh / 12 * 8);
+    background-color: var(--white10);
+}
+
+section#sidebar {
+    width: calc(100vw / 12 * 4);
+    height: calc(100vh / 12 * 8);
+    top: 0;
+    right: 0;
+    background-color: var(--white5);
+    text-align: center;
+    padding-top: 6vh;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+}
+
+/* Prayer elements */
+
+#clockdiv {
+    font-weight: 100;
+    font-size: 3vw;
+    margin: 1vh auto 3vh auto;
+    width: 26vw;
+    padding-bottom: 2vh;
+    border-bottom: var(--grey) 1px solid;
+}
+
+span.prayer {
+    display: inline-block;
+    width: calc(100vw / 6);
+    height: 100%;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+span.prayer.active {
+    background: var(--amber);
+    color: var(--black);
+}
+
+span.prayer span {
+    display: block;
+    font-size: 2vw;
+}
+
+span.prayer span.event {
+    font-size: 2vw;
+    line-height: 8vh;
+    font-weight: 100;
+}
+
+span.prayer span.iqamah {
+    font-size: 4vw;
+}
+
+span.prayer svg {
+    height: 5vh;
+}
+
+span.prayer.active svg {
+    fill: var(--black);
+}
+
+#timediv {
+    font-family: "Helvetica Neue", Roboto, Helvetica, sans-serif;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 4vw;
+    margin: 1vh auto;
+    width: 26vw;
+    border-bottom: var(--grey) 1px solid;
+    padding-bottom: 0.5vh;
+}
+
+#timediv > div {
+    display: inline-block;
+}
+
+/* Sidebar tweaks on prayer elements */
+
+section#sidebar span.prayer {
+    height: auto;
+    padding-top: 2vh;
+}
+
+section#sidebar span.prayer span.time {
+    font-size: 3vw;
+}
+
+section#sidebar span.prayer span.event {
+    font-size: 1.3vw;
+    line-height: 3vh;
+}
+
+section#sidebar.iqamah {
+    background-color: var(--amber);
+}
+
+section#sidebar.salah {
+    background-color: var(--vivid-green-cyan);
+}
+
+section#sidebar.iqamah, section#sidebar.salah {
+    color: var(--black);
+}
+
+section#sidebar.iqamah #clockdiv, section#sidebar.iqamah #timediv, section#sidebar.salah #clockdiv, section#sidebar.salah #timediv {
+    border-color: var(--black);
+}
+
+section#sidebar #timediv {
+    font-size: 6vw;
+}
+
+section#sidebar.salah h2 {
+    font-size: 3vw;
+}
+
+section#sidebar.salah #timediv {
+    font-size: 6vw;
+    padding-bottom: 1vh;
+}
+
+/* TICKER */
+
+section#ticker {
+    width: 100%;
+    height: calc(100vh / 12 * 1);
+    top: calc(100vh / 12 * 11);
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  @-webkit-keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  @keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  .ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    padding-left: 100%;
+    box-sizing: content-box;
+  }
+  .ticker-wrap .ticker {
+    display: inline-block;
+    line-height: 10vh;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+  }
+.ticker-wrap .ticker__item {
+    display: inline-block;
+    padding: 0 2vw;
+    font-size: 3vw;
+    color: var(--white);
+}
