@@ -1,4 +1,5 @@
 # Aisha Masjid Prayer Timer
+This has had added features from the original created by Imtiaz Chowdhury, Please check original work from him at https://github.com/imc786/time.aishamasjid.uk
 
 Prayer timer is a one-page web interface, intended to be shown on a 4K (3840x2160) or FHD (1920x1080) resolution TV/projector screen. It shows the start and Jama'at times of all 5 prayers for the day, and counts down to the next prayer & Iqamah time. The big main section is designed to be overlayed with slides/video stream when deployed.
 
