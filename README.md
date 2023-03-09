@@ -19,7 +19,7 @@ Prayer timer is a one-page web interface, intended to be shown on a 4K (3840x216
 
 2. At the change of the year, the next day's Fajr time is not retrieved, so instead the current year's 31st December times are shown as the next Fajr timing after Isha prayer.
 
-3. To do: handle promises properly.
+3. Edit CSS to make verses and slides fit nicer!
 
 4. Tech debt: MVP is created as a prototype without productionising code. There are several design/architecture improvements that should be considered.
 
@@ -32,4 +32,5 @@ You can force a specific timestamp instead of using current live time by uncomme
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Aisha Masjid Prayer Timer
+Copyright (c) 2023 Shujaaul Islam 
 Copyright (c) 2023 Imtiaz Chowdhury / Western Pixel
